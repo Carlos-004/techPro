@@ -1,0 +1,30 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.iconos{
+    margin-top: 40px;
+    @include m.grid(20px,3,1);
+
+    @include m.telefono{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .icono{
+        display: grid;
+        place-items: center;
+        img{
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        h3{
+            color: v.$azul;
+            margin-bottom: 10px;
+        }
+        p{
+            text-align: center;
+            line-height: 24px;
+        }
+    }
+}

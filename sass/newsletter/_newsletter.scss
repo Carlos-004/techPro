@@ -1,0 +1,58 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.newsletter{
+    margin-top: 40px;
+    .contenido-newsletter{
+        @include m.grid(60px,2,1);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        background-image: url("../../img/newsletter.jpg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 400px;
+
+        .texto-newsletter{
+            padding: 100px 10px 100px 20px;
+            grid-column: 2/3;
+            background-color: v.$blanco;
+            margin-top: -1px;
+
+            @include m.telefono{
+                padding: 10px;
+            }
+            h2{
+                margin-bottom: 20px;
+            }
+            p{
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+            .formulario{
+                display: grid;
+
+                .style__input{
+                    padding: 15px;
+                    border: solid 1px v.$gris-Claro;
+                }
+                .boton{
+                    padding: 15px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: v.$azul;
+                    color: v.$blanco;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

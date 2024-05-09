@@ -1,0 +1,36 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.sobre-tech{
+    margin-top: 40px;
+
+    .sobre-tech-grid{
+        @include m.grid(0,2,1);
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        background-image: url("../../img/imagen-mujer.jpg");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: cover;
+        height: 400px;
+
+        .texto-sobre-tech{
+           background-color: v.$azul;
+           padding:150px 30px 50px 50px;
+           @include m.telefono{
+            padding: 20px;
+           }
+           h2{
+            color: v.$blanco;
+            margin-bottom: 10px;
+           }
+           p{
+            color: v.$blanco;
+            line-height: 24px;
+            font-size: 18px;
+           }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.header{
+    background-color: v.$negro;
+    padding: 50px 0;
+
+    .header__container{
+        @include m.grid(0,2,1fr);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .producto{
+            @include m.telefono{
+                padding: 10px;
+                .producto__subtitle,
+                .producto__title,
+                .descripcion-producto,
+                .precio-producto{
+                    text-align: center;
+                }
+            }
+            .producto__subtitle{
+                color: v.$blanco;
+                margin-bottom: 10px;
+            }
+            .producto__title{
+                font-size: 80px;
+                margin-bottom: 10px;
+            }
+            .bg__title{
+                background:  linear-gradient(to right, (v.$azul)0%,(v.$verde)100%);
+                color: transparent;
+                -webkit-background-clip: text;
+            }  
+            .descripcion-producto{
+                color: v.$blanco;
+                line-height: 24px;
+                margin-bottom: 20px;
+            } 
+            .precio-producto{
+                color: v.$blanco;
+                font-size: 20px;
+
+                span{
+                    font-size: 40px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
